@@ -77,7 +77,9 @@ void strReplace(char *str, char *strin, char *strout, char *out)
 
 double calcExp(var *myvar, int vartop, char *expr)
 {
-    char *p = expr;
+    char *p;
+    p=(char *)malloc(120);
+    strcpy(p,expr);
     int isVarscan = 0;
     char temp[22] = {};
     int curpos = 0;
